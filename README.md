@@ -20,3 +20,4 @@ During this project, I focused not only on HTML structure but also on maintainin
 
 - **Conventional Commits Best Practices:** Learned that the `scope` in commit messages should represent the logical module or domain (e.g., `feat(changelog): ...`) rather than the physical file name (`feat(index.html)`), keeping the commit history scalable and clear.
 - **Accurate Terminology:** Understood the importance of precise domain language—distinguishing between a generic *Table of Contents* and specific *Changelog entries/records*.
+- **Shell Quoting Safety in Git:** Learned the distinction between strong quoting (`'...'`) and weak quoting (`"..."`) in terminal shells like Zsh and Bash. Using outer single quotes treats commit messages as literal raw strings, preventing the shell from accidentally parsing special characters (like `!`, `$`, or backticks) through history expansion or variable interpolation.
