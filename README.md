@@ -13,3 +13,10 @@ A simple component for a website that displays a changelog
 
 **Solution:**
 - Designed an architectural [diagram](#architecture--planning) to map layout hierarchy and decomposed the interface into reusable, semantic box components before writing code.
+
+## 💡 What I Learned
+
+During this project, I focused not only on HTML structure but also on maintaining professional engineering workflows:
+
+- **Conventional Commits Best Practices:** Learned that the `scope` in commit messages should represent the logical module or domain (e.g., `feat(changelog): ...`) rather than the physical file name (`feat(index.html)`), keeping the commit history scalable and clear.
+- **Accurate Terminology:** Understood the importance of precise domain language—distinguishing between a generic *Table of Contents* and specific *Changelog entries/records*.
