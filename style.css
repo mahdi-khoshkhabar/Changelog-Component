@@ -28,3 +28,8 @@ header {
 
     margin-bottom: 0;
 }
+
+.text-muted,
+table tbody td:nth-child(1) {
+    color: color-mix(in srgb, var(--color-text) 70%, white);
+}
