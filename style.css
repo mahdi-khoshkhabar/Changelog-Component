@@ -74,10 +74,32 @@ td:nth-child(1) {
     border-style: none solid none none;
     text-align: end;
     padding-right: 40px;
+    position: relative;
+}
+
+td:nth-child(1)::after {
+    content: "";
+    position: absolute;
+
+    width: 1rem;
+    height: 1rem;
+
+    background: var(--color-text);
+
+    /* for older browsers */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+
+    border-radius: 50%;
+
+    right: -1px;
+    margin-top: 0.15rem;
+
+    transform: translate(50%);
 }
 
 td:nth-child(2) {
-    border-style: none none none solid;
+    border-style: none;
     text-align: start;
     padding-left: 25px;
 }
