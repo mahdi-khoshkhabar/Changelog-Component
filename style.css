@@ -104,6 +104,50 @@ table tbody td:nth-child(1) {
     color: color-mix(in srgb, var(--color-text) 70%, white);
 }
 
+.changelog-list {
+    display: grid;
+    grid-template-areas: "datetime marker content";
+    justify-content: center;
+}
+
+.changelog-item {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: -1/1;
+    padding: 10px 0 10px 0;
+}
+
+.datetime {
+    text-align: right;
+    white-space: nowap;
+    margin-right: 2rem;
+}
+
+.marker {
+    width: 2rem;
+}
+
+.marker::before {
+    content: "";
+    display: block;
+
+    width: 1rem;
+    height: 1rem;
+
+    background: var(--color-text);
+
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+
+    border-radius: 50%;
+}
+
+.marker::after {}
+
+.content {
+}
+
+
 
 
 /* circle:
