@@ -5,6 +5,55 @@
     --color-accent: #F2765E;
 }
 
+/* <<< css reset >>> */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins and padding for common layout elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Allow percentage-based heights in the application */
+html, body {
+  height: 100%;
+}
+
+/* 4. Improve media defaults and prevent overflow */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Inherit fonts for form controls */
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* 6. Avoid text overflows and improve text rendering */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 7. Balance headings and format paragraphs for readability */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+  max-width: 75ch;
+}
+
+/* 8. Enable smooth scrolling (optional, omit if causing accessibility jumps) */
+html {
+  color-scheme: light dark; /* Automatically supports browser default dark mode */
+}
+
 body {
     background-color: var(--color-background);
     color: var(--color-text);
