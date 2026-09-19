@@ -99,8 +99,7 @@ header {
     margin-bottom: 1.2rem;
 }
 
-.text-muted,
-table tbody td:nth-child(1) {
+.text-muted, .datetime {
     color: color-mix(in srgb, var(--color-text) 70%, white);
 }
 
