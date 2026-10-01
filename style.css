@@ -3,6 +3,8 @@
     --color-text: #413333;
     --color-background: #F5EBDD;
     --color-accent: #F2765E;
+
+    --list-middle-position: calc((100% / 5) * 2);
 }
 
 /* <<< css reset >>> */
@@ -99,7 +101,8 @@ header {
     margin-bottom: 1.2rem;
 }
 
-.text-muted, .datetime {
+.text-muted,
+.datetime {
     color: color-mix(in srgb, var(--color-text) 70%, white);
 }
 
@@ -107,13 +110,13 @@ header {
     display: grid;
     grid-template-areas: "datetime marker content";
     justify-content: center;
+    gap: 20px;
 }
 
 .changelog-item {
     display: grid;
     grid-template-columns: subgrid;
     grid-column: -1/1;
-    padding: 10px 0 10px 0;
 }
 
 .datetime {
@@ -124,9 +127,26 @@ header {
 
 .marker {
     width: 2rem;
+    position: relative;
 }
 
+/* line */
 .marker::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--list-middle-position);
+    transform: translate(-50%);
+
+    background-color: var(--color-text);
+    width: 2px;
+    z-index: 1;
+}
+
+/* circle */
+.marker::after {
     content: "";
     display: block;
 
@@ -139,13 +159,12 @@ header {
     -webkit-border-radius: 50%;
 
     border-radius: 50%;
+
+    position: absolute;
+
+    left: 50%;
+    transform: translate(-50%);
 }
-
-.marker::after {}
-
-.content {
-}
-
 
 
 
