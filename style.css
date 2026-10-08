@@ -106,7 +106,8 @@ header {
     grid-template-columns: 1fr 2rem 2fr;
     justify-content: center;
     --gap: 20px;
-    gap: var(--gap);
+    row-gap: var(--gap);
+    column-gap: 0.5rem;
     list-style: none;
 }
 
@@ -119,6 +120,7 @@ header {
 .datetime {
     text-align: right;
     white-space: nowrap;
+    padding-inline-end: 2rem;
 }
 
 
@@ -134,7 +136,7 @@ header {
 }
 
 .marker {
-    width: 2rem;
+    width: 1rem;
     position: relative;
     align-self: stretch
 }
