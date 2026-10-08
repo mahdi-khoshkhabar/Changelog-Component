@@ -3,8 +3,6 @@
     --color-text: #413333;
     --color-background: #F5EBDD;
     --color-accent: #F2765E;
-
-    --list-middle-position: calc((100% / 5) * 2);
 }
 
 /* <<< css reset >>> */
@@ -80,7 +78,6 @@ html {
 body {
     background-color: var(--color-background);
     color: var(--color-text);
-
     font-family: sans-serif;
 }
 
@@ -89,28 +86,28 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 20vh;
+    gap: 1.2rem;
 }
 
 .title {
     font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: 0.01em;
-
-    margin-bottom: 1.2rem;
 }
 
-.text-muted,
-.datetime {
+.fade,
+.changelog-list .datetime {
     color: color-mix(in srgb, var(--color-text) 70%, white);
 }
 
 .changelog-list {
     display: grid;
-    grid-template-areas: "datetime marker content";
+    grid-template-columns: 1fr 2rem 2fr;
     justify-content: center;
-    gap: 20px;
+    --gap: 20px;
+    gap: var(--gap);
+    list-style: none;
 }
 
 .changelog-item {
@@ -121,61 +118,40 @@ header {
 
 .datetime {
     text-align: right;
-    white-space: nowap;
-    margin-right: 2rem;
+    white-space: nowrap;
+}
+
+
+/* line */
+.marker::before {
+    content: "";
+    left: 50%;
+    position: absolute;
+    translate: -50% 0;
+    inset-block: calc(var(--gap) / -2);
+    background-color: var(--color-text);
+    width: 2px;
 }
 
 .marker {
     width: 2rem;
     position: relative;
-}
-
-/* line */
-.marker::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: var(--list-middle-position);
-    transform: translate(-50%);
-
-    background-color: var(--color-text);
-    width: 2px;
-    z-index: 1;
+    align-self: stretch
 }
 
 /* circle */
 .marker::after {
     content: "";
     display: block;
-
     width: 1rem;
     height: 1rem;
-
     background: var(--color-text);
-
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-
     border-radius: 50%;
-
     position: absolute;
-
     left: 50%;
     transform: translate(-50%);
+    top: 50%;
+    translate: -50% -50%;
 }
-
-
-
-/* circle:
-
-    width: 1rem;
-    height: 1rem;
-
-    background: var(--color-text);
-
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-
-    border-radius: 50%; */
