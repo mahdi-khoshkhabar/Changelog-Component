@@ -102,8 +102,8 @@ header {
 }
 
 .changelog-list {
-    --gap: 20px;
-    --line-extra: 2rem;
+    --gap: 3rem;
+    --line-extra: 3rem;
     display: grid;
     grid-template-columns: 1fr 2rem 2fr;
     justify-content: center;
