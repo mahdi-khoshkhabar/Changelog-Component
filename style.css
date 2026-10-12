@@ -180,4 +180,9 @@ main {
     border-radius: 1rem;
     text-decoration: none;
     width: fit-content;
+    transition: transform 0.2s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
 }
