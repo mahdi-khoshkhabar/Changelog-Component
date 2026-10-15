@@ -1,15 +1,5 @@
 :root {
-    --color-primary: #315B8C;
-    --color-text: #413333;
-    --color-background: #F5EBDD;
-    --color-accent: #F2765E;
-}
-
-body {
-    background-color: var(--color-background);
-    color: var(--color-text);
-
-    font-family: sans-serif;
+    --header-height: 20vh;
 }
 
 header {
@@ -17,75 +7,22 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    height: 20vh;
+    height: var(--header-height);
+    gap: 1.2rem;
 }
 
 .title {
     font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: 0.01em;
-
-    margin-bottom: 0;
 }
 
+<<<<<<< HEAD
 .text-muted,
 table tbody td:nth-child(1) {
     color: color-mix(in srgb, var(--color-text) 50%, white);
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    clip-path: inset(50%);
-    white-space: nowrap;
-    border: 0;
-}
-
-table {
-    border-collapse: collapse;
-
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 1.1rem;
-
-    table-layout: fixed;
-
-    margin: 20px 0;
-}
-
-
-td {
-    border: 2px solid var(--color-text);
-    padding: 20px;
-}
-
-td:nth-child(1) {
-    border-style: none solid none none;
-    text-align: end;
-    padding-right: 40px;
-}
-
-td:nth-child(2) {
-    border-style: none none none solid;
-    text-align: start;
-    padding-left: 25px;
-}
-
-tr:nth-child(2) td {
-    padding-top: 3rem;
-}
-
-tr:last-child td {
-    padding-bottom: 3rem;
+=======
+main {
+    min-height: calc(100vh - (var(--header-height)));
+>>>>>>> dev
 }
