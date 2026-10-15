@@ -3,6 +3,8 @@
     --color-text: #413333;
     --color-background: #F5EBDD;
     --color-accent: #F2765E;
+
+    --button-space: 10vh;
 }
 
 /* <<< css reset >>> */
@@ -105,6 +107,7 @@ main {
     column-gap: 0.5rem;
     list-style: none;
     margin-block: var(--line-extra);
+    padding-bottom: var(--button-space);
 }
 
 .changelog-item {
@@ -167,6 +170,8 @@ main {
     text-decoration: none;
     width: fit-content;
     transition: transform 0.2s ease;
+    position: sticky;
+    bottom: 5vh;
 }
 
 .button:hover {
