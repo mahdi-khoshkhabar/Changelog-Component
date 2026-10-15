@@ -3,6 +3,8 @@
 A clean, accessible, and semantic changelog component built with pure HTML & CSS.  
 Designed as a reusable UI piece that displays a timeline of notable changes in a project.
 
+> Project from [roadmap.sh](https://roadmap.sh/projects/changelog-component)
+
 ---
 
 ## Architecture & Planning
