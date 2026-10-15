@@ -71,11 +71,6 @@ p {
     max-width: 75ch;
 }
 
-/* 8. Enable smooth scrolling (optional, omit if causing accessibility jumps) */
-html {
-    color-scheme: light dark;
-    /* Automatically supports browser default dark mode */
-}
 
 body {
     background-color: var(--color-background);
